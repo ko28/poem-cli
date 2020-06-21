@@ -5,9 +5,15 @@ import requests
 from bs4 import BeautifulSoup 
 
 poem_of_the_day_url = 'https://www.poetryfoundation.org/poems/poem-of-the-day'
-harlem = 'https://www.poetryfoundation.org/poems/46548/harlem'
+#harlem = 'https://www.poetryfoundation.org/poems/46548/harlem'
 html = requests.get(poem_of_the_day_url).text
 soup = BeautifulSoup(html, "html.parser")
+
+#poem is too long, go to full page
+readmore = soup.find('a',{'class':'c-txt c-txt_minimalCta'})
+if readmore.getText().strip() == "Read More":
+    html = requests.get(readmore.get('href')).text
+    soup = BeautifulSoup(html, "html.parser")
 
 #find title
 print(soup.find('div',{'class':'c-feature-hd'}).getText().strip())
