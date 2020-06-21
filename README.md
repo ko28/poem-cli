@@ -4,13 +4,13 @@ View Poetry Foundation's Poem of the Day in your terminal
 ## Install
 Download the script 
 ```
-wget -O poem-cli https://raw.githubusercontent.com/ko28/poem-cli/master/poem.py
-chmod +x poem-cli
+wget -O poem https://raw.githubusercontent.com/ko28/poem-cli/master/poem
+chmod +x poem
 ```
 or
 ```
-curl -Lo poem-cli https://raw.githubusercontent.com/ko28/poem-cli/master/poem.py
-chmod +x poem-cli
+curl -Lo poem https://raw.githubusercontent.com/ko28/poem-cli/master/poem
+chmod +x poem
 ```
 Install dependencies 
 ```
@@ -24,8 +24,9 @@ Run the script
 ## Example poem
 ```
 Fade to Light                                                                                                           
-By Cole Swensen                                                                                                                                                                                                                                 Hand me this hand
+By Cole Swensen                                                                                                                         
 
+Hand me this hand
 The sail is bent
 The trail is sold
 and the wind tied in knots
